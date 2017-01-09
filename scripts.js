@@ -1,18 +1,18 @@
-var toFahren = function() {
-  var startPoint = prompt("Please enter a temperature, in Celsius");
-  return startPoint * 9/5 + 32;
-}
-
-var toCelsius = function() {
-  var tempFahr = prompt("Please enter a temperature, in Fahrenheit");
-  return (tempFahr - 32) * 5/9;
-}
-
-alert(toCelsius());
+// var toFahren = function() {
+//   var startPoint = prompt("Please enter a temperature, in Celsius");
+//   return startPoint * 9/5 + 32;
+// }
+//
+// var toCelsius = function() {
+//   var tempFahr = prompt("Please enter a temperature, in Fahrenheit");
+//   return (tempFahr - 32) * 5/9;
+// }
+//
+// alert(toCelsius());
 
 /*Volume conversions - liters as central reference point, convert from there*/
 
-var galToLiters = function(gallons) {
+var gallonsToLiters = function(gallons) {
   return gallons * 3.78541;
 }
 
@@ -47,10 +47,6 @@ var klToLiters = function(kiloliters) {
 var dlToLiters = function(deciliters) {
   return deiliters * .1;
 }
-
-
-
-
 
 var litersToGallons = function(liters) {
   return liters / 3.78541;
@@ -87,3 +83,18 @@ var litersToKl = function(liters) {
 var litersToDl = function(liters) {
   return liters / .1;
 }
+
+var add = function(num,num2){
+  var added = num + num2;
+}
+
+
+var gallonsToCups = function() {
+  var gallons = parseFloat(prompt("Gimme some gallons"));
+  alert(gallons);
+  var liters = (gallonsToLiters(gallons));
+  var cups = literToCups(liters);
+  alert(cups);
+}
+
+gallonsToCups();

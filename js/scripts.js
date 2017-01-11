@@ -1,24 +1,30 @@
-var number1 = parseInt(prompt("Enter a number:"));
+//User interface (front-end) logic:
+$(document).ready(function() {
+  $("form#add").submit(function(event) {
+    event.preventDefault();
+    var number1 = parseInt($("#add1").val());
+    var number2 = parseInt($("#add2").val());
+    var result = (add(number1, number2));
+    $("#output").text(result);
+  });
+});
 
-var number2 = parseInt(prompt("Enter another number:"));
-
-var method = prompt("What would you like to do with the number? Enter 1 for addition, 2 for subtraction, 3 for multiplication, 4 for division");
-
+//Business (back-end) logic:
 var add = function(number1, number2) {
   return number1 + number2;
 };
 
 var subtract = function(num1, num2) {
   return num1 - num2;
-}
+};
 
 var multiplication = function(number1, number2) {
   return number1 * number2;
-}
+};
 
 var divide = function(number1, number2) {
   return number1/number2;
-}
+};
 
 alert(subtract(number1, number2));
 
